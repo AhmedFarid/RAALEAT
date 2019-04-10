@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A5843F61A0D8094D806739C /* Pods_RAALEAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05AB0106002495836A05140 /* Pods_RAALEAT.framework */; };
+		69A72F0A225B92D30033E6AC /* searchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A72F09225B92D30033E6AC /* searchResults.storyboard */; };
+		69A72F0C225BAF2B0033E6AC /* Cofig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0B225BAF2B0033E6AC /* Cofig.swift */; };
+		69A72F0E225BB24E0033E6AC /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0D225BB24E0033E6AC /* helper.swift */; };
+		69A72F10225BB3270033E6AC /* showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0F225BB3270033E6AC /* showAlert.swift */; };
+		69A72F12225BB3EA0033E6AC /* API+AUTH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F11225BB3EA0033E6AC /* API+AUTH.swift */; };
 		69AF4A072259EF1200B88D16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A062259EF1200B88D16 /* AppDelegate.swift */; };
-		69AF4A092259EF1200B88D16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A082259EF1200B88D16 /* ViewController.swift */; };
+		69AF4A092259EF1200B88D16 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A082259EF1200B88D16 /* loginVC.swift */; };
 		69AF4A0C2259EF1200B88D16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AF4A0A2259EF1200B88D16 /* Main.storyboard */; };
 		69AF4A0E2259EF1500B88D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AF4A0D2259EF1500B88D16 /* Assets.xcassets */; };
 		69AF4A112259EF1500B88D16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AF4A0F2259EF1500B88D16 /* LaunchScreen.storyboard */; };
@@ -23,12 +29,23 @@
 		69AF4A32225A1EFE00B88D16 /* TCCEB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 69AF4A2D225A1EFE00B88D16 /* TCCEB.TTF */; };
 		69AF4A34225A2F6E00B88D16 /* gredentButon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A33225A2F6E00B88D16 /* gredentButon.swift */; };
 		69AF4A36225A5A3500B88D16 /* menueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A35225A5A3500B88D16 /* menueVC.swift */; };
+		69C19D67225E489500C14259 /* resetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C19D66225E489500C14259 /* resetPasswordVC.swift */; };
+		69C19D69225E565300C14259 /* getCitys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C19D68225E565300C14259 /* getCitys.swift */; };
+		69C19D6B225E5A6500C14259 /* API+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C19D6A225E5A6500C14259 /* API+Home.swift */; };
+		69D86927225CF8A30085653E /* searchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D86926225CF8A30085653E /* searchVC.swift */; };
+		69D86929225D08E80085653E /* registerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D86928225D08E80085653E /* registerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		688915E6CAE11B740EA28691 /* Pods-RAALEAT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAALEAT.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAALEAT/Pods-RAALEAT.release.xcconfig"; sourceTree = "<group>"; };
+		69A72F09225B92D30033E6AC /* searchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = searchResults.storyboard; sourceTree = "<group>"; };
+		69A72F0B225BAF2B0033E6AC /* Cofig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cofig.swift; sourceTree = "<group>"; };
+		69A72F0D225BB24E0033E6AC /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		69A72F0F225BB3270033E6AC /* showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showAlert.swift; sourceTree = "<group>"; };
+		69A72F11225BB3EA0033E6AC /* API+AUTH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+AUTH.swift"; sourceTree = "<group>"; };
 		69AF4A032259EF1200B88D16 /* RAALEAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAALEAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AF4A062259EF1200B88D16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69AF4A082259EF1200B88D16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69AF4A082259EF1200B88D16 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 		69AF4A0B2259EF1200B88D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69AF4A0D2259EF1500B88D16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69AF4A102259EF1500B88D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +61,13 @@
 		69AF4A2D225A1EFE00B88D16 /* TCCEB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = TCCEB.TTF; sourceTree = "<group>"; };
 		69AF4A33225A2F6E00B88D16 /* gredentButon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gredentButon.swift; sourceTree = "<group>"; };
 		69AF4A35225A5A3500B88D16 /* menueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menueVC.swift; sourceTree = "<group>"; };
+		69C19D66225E489500C14259 /* resetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetPasswordVC.swift; sourceTree = "<group>"; };
+		69C19D68225E565300C14259 /* getCitys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getCitys.swift; sourceTree = "<group>"; };
+		69C19D6A225E5A6500C14259 /* API+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Home.swift"; sourceTree = "<group>"; };
+		69D86926225CF8A30085653E /* searchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchVC.swift; sourceTree = "<group>"; };
+		69D86928225D08E80085653E /* registerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerVC.swift; sourceTree = "<group>"; };
+		92655F2287D5196982B1ADD6 /* Pods-RAALEAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAALEAT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAALEAT/Pods-RAALEAT.debug.xcconfig"; sourceTree = "<group>"; };
+		C05AB0106002495836A05140 /* Pods_RAALEAT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAALEAT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +75,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5843F61A0D8094D806739C /* Pods_RAALEAT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60420EF0AF09F20002F7F0FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92655F2287D5196982B1ADD6 /* Pods-RAALEAT.debug.xcconfig */,
+				688915E6CAE11B740EA28691 /* Pods-RAALEAT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		69A72F13225BB8490033E6AC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				69AF4A082259EF1200B88D16 /* loginVC.swift */,
+				69D86928225D08E80085653E /* registerVC.swift */,
+				69C19D66225E489500C14259 /* resetPasswordVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		69AF49FA2259EF1200B88D16 = {
 			isa = PBXGroup;
 			children = (
 				69AF4A052259EF1200B88D16 /* RAALEAT */,
 				69AF4A042259EF1200B88D16 /* Products */,
+				60420EF0AF09F20002F7F0FC /* Pods */,
+				BBC1E32C464546670A4D7AA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +142,8 @@
 		69AF4A182259F12600B88D16 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				69A72F11225BB3EA0033E6AC /* API+AUTH.swift */,
+				69C19D6A225E5A6500C14259 /* API+Home.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -103,7 +151,8 @@
 		69AF4A192259F13400B88D16 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				69AF4A082259EF1200B88D16 /* ViewController.swift */,
+				69D86925225CF8880085653E /* home */,
+				69A72F13225BB8490033E6AC /* Auth */,
 				69AF4A35225A5A3500B88D16 /* menueVC.swift */,
 			);
 			path = Controller;
@@ -112,6 +161,8 @@
 		69AF4A1A2259F16400B88D16 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				69A72F0D225BB24E0033E6AC /* helper.swift */,
+				69A72F0F225BB3270033E6AC /* showAlert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -133,6 +184,7 @@
 		69AF4A1C2259F17700B88D16 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69C19D68225E565300C14259 /* getCitys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +192,7 @@
 		69AF4A1D2259F17F00B88D16 /* URLS */ = {
 			isa = PBXGroup;
 			children = (
+				69A72F0B225BAF2B0033E6AC /* Cofig.swift */,
 			);
 			path = URLS;
 			sourceTree = "<group>";
@@ -165,8 +218,25 @@
 			isa = PBXGroup;
 			children = (
 				69AF4A0A2259EF1200B88D16 /* Main.storyboard */,
+				69A72F09225B92D30033E6AC /* searchResults.storyboard */,
 			);
 			path = storyboard;
+			sourceTree = "<group>";
+		};
+		69D86925225CF8880085653E /* home */ = {
+			isa = PBXGroup;
+			children = (
+				69D86926225CF8A30085653E /* searchVC.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		BBC1E32C464546670A4D7AA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C05AB0106002495836A05140 /* Pods_RAALEAT.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69AF4A152259EF1500B88D16 /* Build configuration list for PBXNativeTarget "RAALEAT" */;
 			buildPhases = (
+				624082E20CB4AC10E9E7DE19 /* [CP] Check Pods Manifest.lock */,
 				69AF49FF2259EF1200B88D16 /* Sources */,
 				69AF4A002259EF1200B88D16 /* Frameworks */,
 				69AF4A012259EF1200B88D16 /* Resources */,
+				E6C3E7BED4E4094D9200DF13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +304,7 @@
 				69AF4A112259EF1500B88D16 /* LaunchScreen.storyboard in Resources */,
 				69AF4A0E2259EF1500B88D16 /* Assets.xcassets in Resources */,
 				69AF4A2F225A1EFE00B88D16 /* TCB_____.TTF in Resources */,
+				69A72F0A225B92D30033E6AC /* searchResults.storyboard in Resources */,
 				69AF4A0C2259EF1200B88D16 /* Main.storyboard in Resources */,
 				69AF4A32225A1EFE00B88D16 /* TCCEB.TTF in Resources */,
 				69AF4A30225A1EFE00B88D16 /* TCBI____.TTF in Resources */,
@@ -242,6 +315,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		624082E20CB4AC10E9E7DE19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RAALEAT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6C3E7BED4E4094D9200DF13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RAALEAT/Pods-RAALEAT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FlagPhoneNumber/FlagPhoneNumber.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/libPhoneNumber-iOS/libPhoneNumber_iOS.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlagPhoneNumber.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libPhoneNumber_iOS.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RAALEAT/Pods-RAALEAT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		69AF49FF2259EF1200B88D16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -250,9 +374,18 @@
 				69AF4A24225A066C00B88D16 /* roundedView.swift in Sources */,
 				69AF4A36225A5A3500B88D16 /* menueVC.swift in Sources */,
 				69AF4A34225A2F6E00B88D16 /* gredentButon.swift in Sources */,
+				69D86927225CF8A30085653E /* searchVC.swift in Sources */,
 				69AF4A22225A015200B88D16 /* circleVIew.swift in Sources */,
-				69AF4A092259EF1200B88D16 /* ViewController.swift in Sources */,
+				69C19D69225E565300C14259 /* getCitys.swift in Sources */,
+				69A72F12225BB3EA0033E6AC /* API+AUTH.swift in Sources */,
+				69D86929225D08E80085653E /* registerVC.swift in Sources */,
+				69A72F0C225BAF2B0033E6AC /* Cofig.swift in Sources */,
+				69AF4A092259EF1200B88D16 /* loginVC.swift in Sources */,
 				69AF4A072259EF1200B88D16 /* AppDelegate.swift in Sources */,
+				69C19D67225E489500C14259 /* resetPasswordVC.swift in Sources */,
+				69A72F10225BB3270033E6AC /* showAlert.swift in Sources */,
+				69A72F0E225BB24E0033E6AC /* helper.swift in Sources */,
+				69C19D6B225E5A6500C14259 /* API+Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +529,7 @@
 		};
 		69AF4A162259EF1500B88D16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92655F2287D5196982B1ADD6 /* Pods-RAALEAT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -414,6 +548,7 @@
 		};
 		69AF4A172259EF1500B88D16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688915E6CAE11B740EA28691 /* Pods-RAALEAT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

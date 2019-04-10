@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.8.2)
+  - FlagPhoneNumber (0.7.2):
+    - libPhoneNumber-iOS
+  - IQKeyboardManagerSwift (6.2.1)
+  - Kingfisher (5.3.1)
+  - libPhoneNumber-iOS (0.9.13)
+  - RevealingSplashView (0.6.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - FlagPhoneNumber
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - RevealingSplashView
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FlagPhoneNumber
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - libPhoneNumber-iOS
+    - RevealingSplashView
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  FlagPhoneNumber: 86194d414c7e3b2f38c16136c4f8a5d34e3ee8b7
+  IQKeyboardManagerSwift: 0f0ae8935360b4003e6ea1ac7c19898f01e2f7c7
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+  libPhoneNumber-iOS: e444379ac18bbfbdefad571da735b2cd7e096caa
+  RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: eee47c2aec03fdb220cad9ae165d9cd00ac99bec
+
+COCOAPODS: 1.5.2
