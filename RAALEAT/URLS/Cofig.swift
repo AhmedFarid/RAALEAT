@@ -12,11 +12,16 @@ import Foundation
 struct URLs {
     
     static let main = "http://raaleat.com/site/public/api/"
-    static let mainImage = ""
+    static let mainImage = "http://raaleat.com/site/"
     
     
     static let login = main + "login"
     static let register = main + "register"
     static let resetPassword = main + "resetPassword"
     static let getCity = main + "getCity"
+    static let getState = main + "getState"
+    static let getType = main + "getType"
+    static let search = main + "search"
+    static let getMenu = main + "getMenu"
+    static let getMenuDetails = main + "getMenuDetails"
 }

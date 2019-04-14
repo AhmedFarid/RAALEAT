@@ -12,6 +12,7 @@ target 'RAALEAT' do
   pod 'IQKeyboardManagerSwift'
   pod "FlagPhoneNumber"
   pod 'RevealingSplashView'
+  pod 'Cosmos'
   # Pods for RAALEAT
 
 end

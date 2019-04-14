@@ -14,6 +14,7 @@ class registerVC: UIViewController {
     
     var isValid: Bool?
     
+    @IBOutlet weak var spiner: UIActivityIndicatorView!
     @IBOutlet weak var fristNameTF: UITextField!
     @IBOutlet weak var phoneTF: FPNTextField!
     @IBOutlet weak var locTF: UITextField!
@@ -21,6 +22,7 @@ class registerVC: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        spiner.isHidden = true
         phoneTF.delegate = self
         fristNameTF.delegate = self
         phoneTF.setCountries(including: [.SA])
@@ -96,6 +98,8 @@ class registerVC: UIViewController {
         let phoneWithoutSpace = phone.replacingOccurrences(of: " ", with: "")
         
         
+        self.spiner.startAnimating()
+        self.spiner.isHidden = false
         
         API_AUTH.register(firstName: fristNameTF.text ?? "", email: emailTF.text ?? "", password: passwordTF.text ?? "", phone: phoneWithoutSpace, address: locTF.text ?? ""){ (error: Error?, success: Bool,statuse, data)  in
             if success {
@@ -125,6 +129,9 @@ class registerVC: UIViewController {
                 self.showAlert(title: "register", message: "\(data ?? "")")
             }
             
+            self.spiner.stopAnimating()
+            self.spiner.isHidden = true
+            
         }
         
     }
@@ -145,6 +152,7 @@ class registerVC: UIViewController {
         return isValid
     }
     
+   
     
 }
 

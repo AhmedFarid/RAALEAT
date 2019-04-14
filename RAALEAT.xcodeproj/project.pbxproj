@@ -29,6 +29,11 @@
 		69AF4A32225A1EFE00B88D16 /* TCCEB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 69AF4A2D225A1EFE00B88D16 /* TCCEB.TTF */; };
 		69AF4A34225A2F6E00B88D16 /* gredentButon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A33225A2F6E00B88D16 /* gredentButon.swift */; };
 		69AF4A36225A5A3500B88D16 /* menueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A35225A5A3500B88D16 /* menueVC.swift */; };
+		69B191E1225F5C710044900D /* searchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B191E0225F5C710044900D /* searchCell.swift */; };
+		69B191E4225F5CA10044900D /* searchdetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B191E3225F5CA10044900D /* searchdetailsVC.swift */; };
+		69B191E7225F816B0044900D /* menuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B191E6225F816B0044900D /* menuVC.swift */; };
+		69B191E9225F85450044900D /* maimMnueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B191E8225F85450044900D /* maimMnueCell.swift */; };
+		69B191EB225F9A260044900D /* mellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B191EA225F9A260044900D /* mellCell.swift */; };
 		69C19D67225E489500C14259 /* resetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C19D66225E489500C14259 /* resetPasswordVC.swift */; };
 		69C19D69225E565300C14259 /* getCitys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C19D68225E565300C14259 /* getCitys.swift */; };
 		69C19D6B225E5A6500C14259 /* API+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C19D6A225E5A6500C14259 /* API+Home.swift */; };
@@ -61,6 +66,11 @@
 		69AF4A2D225A1EFE00B88D16 /* TCCEB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = TCCEB.TTF; sourceTree = "<group>"; };
 		69AF4A33225A2F6E00B88D16 /* gredentButon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gredentButon.swift; sourceTree = "<group>"; };
 		69AF4A35225A5A3500B88D16 /* menueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menueVC.swift; sourceTree = "<group>"; };
+		69B191E0225F5C710044900D /* searchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchCell.swift; sourceTree = "<group>"; };
+		69B191E3225F5CA10044900D /* searchdetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchdetailsVC.swift; sourceTree = "<group>"; };
+		69B191E6225F816B0044900D /* menuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuVC.swift; sourceTree = "<group>"; };
+		69B191E8225F85450044900D /* maimMnueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maimMnueCell.swift; sourceTree = "<group>"; };
+		69B191EA225F9A260044900D /* mellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mellCell.swift; sourceTree = "<group>"; };
 		69C19D66225E489500C14259 /* resetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetPasswordVC.swift; sourceTree = "<group>"; };
 		69C19D68225E565300C14259 /* getCitys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getCitys.swift; sourceTree = "<group>"; };
 		69C19D6A225E5A6500C14259 /* API+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Home.swift"; sourceTree = "<group>"; };
@@ -210,6 +220,7 @@
 		69AF4A1F2259F19B00B88D16 /* cellClass */ = {
 			isa = PBXGroup;
 			children = (
+				69B191E2225F5C760044900D /* home */,
 			);
 			path = cellClass;
 			sourceTree = "<group>";
@@ -223,10 +234,30 @@
 			path = storyboard;
 			sourceTree = "<group>";
 		};
-		69D86925225CF8880085653E /* home */ = {
+		69B191E2225F5C760044900D /* home */ = {
+			isa = PBXGroup;
+			children = (
+				69B191E0225F5C710044900D /* searchCell.swift */,
+				69B191E8225F85450044900D /* maimMnueCell.swift */,
+				69B191EA225F9A260044900D /* mellCell.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		69B191E5225F814E0044900D /* search */ = {
 			isa = PBXGroup;
 			children = (
 				69D86926225CF8A30085653E /* searchVC.swift */,
+				69B191E3225F5CA10044900D /* searchdetailsVC.swift */,
+				69B191E6225F816B0044900D /* menuVC.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		69D86925225CF8880085653E /* home */ = {
+			isa = PBXGroup;
+			children = (
+				69B191E5225F814E0044900D /* search */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -342,6 +373,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RAALEAT/Pods-RAALEAT-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/FlagPhoneNumber/FlagPhoneNumber.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -352,6 +384,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlagPhoneNumber.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -372,20 +405,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				69AF4A24225A066C00B88D16 /* roundedView.swift in Sources */,
+				69B191E1225F5C710044900D /* searchCell.swift in Sources */,
 				69AF4A36225A5A3500B88D16 /* menueVC.swift in Sources */,
 				69AF4A34225A2F6E00B88D16 /* gredentButon.swift in Sources */,
 				69D86927225CF8A30085653E /* searchVC.swift in Sources */,
 				69AF4A22225A015200B88D16 /* circleVIew.swift in Sources */,
 				69C19D69225E565300C14259 /* getCitys.swift in Sources */,
 				69A72F12225BB3EA0033E6AC /* API+AUTH.swift in Sources */,
+				69B191E9225F85450044900D /* maimMnueCell.swift in Sources */,
 				69D86929225D08E80085653E /* registerVC.swift in Sources */,
+				69B191E7225F816B0044900D /* menuVC.swift in Sources */,
 				69A72F0C225BAF2B0033E6AC /* Cofig.swift in Sources */,
 				69AF4A092259EF1200B88D16 /* loginVC.swift in Sources */,
 				69AF4A072259EF1200B88D16 /* AppDelegate.swift in Sources */,
 				69C19D67225E489500C14259 /* resetPasswordVC.swift in Sources */,
+				69B191E4225F5CA10044900D /* searchdetailsVC.swift in Sources */,
 				69A72F10225BB3270033E6AC /* showAlert.swift in Sources */,
 				69A72F0E225BB24E0033E6AC /* helper.swift in Sources */,
 				69C19D6B225E5A6500C14259 /* API+Home.swift in Sources */,
+				69B191EB225F9A260044900D /* mellCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ import RevealingSplashView
 class loginVC: UIViewController {
 
     //@IBOutlet weak var views: UIView!
+    @IBOutlet weak var spiner: UIActivityIndicatorView!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
@@ -20,6 +21,7 @@ class loginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        spiner.isHidden = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -60,6 +62,9 @@ class loginVC: UIViewController {
             return
         }
         
+        self.spiner.startAnimating()
+        self.spiner.isHidden = false
+        
         API_AUTH.login(email: userName, password: passwords) { (error: Error?, success: Bool, data) in
             if success {
                 if data == nil {
@@ -71,6 +76,9 @@ class loginVC: UIViewController {
             }else {
                 self.showAlert(title: "Login Filed", message: "\(data ?? "")")
             }
+            
+            self.spiner.stopAnimating()
+            self.spiner.isHidden = true
             
         }
     }
