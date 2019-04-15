@@ -97,7 +97,6 @@ class searchVC: UIViewController {
         }else {
             city.isEnabled = true
         }
-        
         if getState.isEmpty == true {
             state.isEnabled = false
         }else {

@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5A5843F61A0D8094D806739C /* Pods_RAALEAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05AB0106002495836A05140 /* Pods_RAALEAT.framework */; };
+		6915C19722647F3700B732F1 /* setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6915C19622647F3700B732F1 /* setting.storyboard */; };
+		6915C19922648A2700B732F1 /* API+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6915C19822648A2700B732F1 /* API+Profile.swift */; };
+		6915C19B226490DF00B732F1 /* profileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6915C19A226490DF00B732F1 /* profileVC.swift */; };
+		6915C19D2264913F00B732F1 /* settingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6915C19C2264913F00B732F1 /* settingVC.swift */; };
+		6915C1A02264A33B00B732F1 /* cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6915C19F2264A33B00B732F1 /* cart.storyboard */; };
+		6915C1A32264AFEA00B732F1 /* cartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6915C1A22264AFEA00B732F1 /* cartCell.swift */; };
+		6915C1A62264B3F200B732F1 /* cartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6915C1A52264B3F200B732F1 /* cartVC.swift */; };
 		69A72F0A225B92D30033E6AC /* searchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A72F09225B92D30033E6AC /* searchResults.storyboard */; };
 		69A72F0C225BAF2B0033E6AC /* Cofig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0B225BAF2B0033E6AC /* Cofig.swift */; };
 		69A72F0E225BB24E0033E6AC /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0D225BB24E0033E6AC /* helper.swift */; };
 		69A72F10225BB3270033E6AC /* showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0F225BB3270033E6AC /* showAlert.swift */; };
 		69A72F12225BB3EA0033E6AC /* API+AUTH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F11225BB3EA0033E6AC /* API+AUTH.swift */; };
+		69ADBE372263600E0091A761 /* addToCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADBE362263600E0091A761 /* addToCartVC.swift */; };
+		69ADBE3A226389000091A761 /* API+Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADBE39226389000091A761 /* API+Cart.swift */; };
 		69AF4A072259EF1200B88D16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A062259EF1200B88D16 /* AppDelegate.swift */; };
 		69AF4A092259EF1200B88D16 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A082259EF1200B88D16 /* loginVC.swift */; };
 		69AF4A0C2259EF1200B88D16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AF4A0A2259EF1200B88D16 /* Main.storyboard */; };
@@ -43,11 +52,20 @@
 
 /* Begin PBXFileReference section */
 		688915E6CAE11B740EA28691 /* Pods-RAALEAT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAALEAT.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAALEAT/Pods-RAALEAT.release.xcconfig"; sourceTree = "<group>"; };
+		6915C19622647F3700B732F1 /* setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = setting.storyboard; sourceTree = "<group>"; };
+		6915C19822648A2700B732F1 /* API+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Profile.swift"; sourceTree = "<group>"; };
+		6915C19A226490DF00B732F1 /* profileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileVC.swift; sourceTree = "<group>"; };
+		6915C19C2264913F00B732F1 /* settingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingVC.swift; sourceTree = "<group>"; };
+		6915C19F2264A33B00B732F1 /* cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = cart.storyboard; sourceTree = "<group>"; };
+		6915C1A22264AFEA00B732F1 /* cartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartCell.swift; sourceTree = "<group>"; };
+		6915C1A52264B3F200B732F1 /* cartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartVC.swift; sourceTree = "<group>"; };
 		69A72F09225B92D30033E6AC /* searchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = searchResults.storyboard; sourceTree = "<group>"; };
 		69A72F0B225BAF2B0033E6AC /* Cofig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cofig.swift; sourceTree = "<group>"; };
 		69A72F0D225BB24E0033E6AC /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		69A72F0F225BB3270033E6AC /* showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showAlert.swift; sourceTree = "<group>"; };
 		69A72F11225BB3EA0033E6AC /* API+AUTH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+AUTH.swift"; sourceTree = "<group>"; };
+		69ADBE362263600E0091A761 /* addToCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addToCartVC.swift; sourceTree = "<group>"; };
+		69ADBE39226389000091A761 /* API+Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Cart.swift"; sourceTree = "<group>"; };
 		69AF4A032259EF1200B88D16 /* RAALEAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAALEAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AF4A062259EF1200B88D16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AF4A082259EF1200B88D16 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
@@ -99,6 +117,31 @@
 				688915E6CAE11B740EA28691 /* Pods-RAALEAT.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6915C19E2264968900B732F1 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				6915C19C2264913F00B732F1 /* settingVC.swift */,
+				6915C19A226490DF00B732F1 /* profileVC.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		6915C1A12264AFAC00B732F1 /* cart */ = {
+			isa = PBXGroup;
+			children = (
+				6915C1A22264AFEA00B732F1 /* cartCell.swift */,
+			);
+			path = cart;
+			sourceTree = "<group>";
+		};
+		6915C1A42264B3D200B732F1 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				6915C1A52264B3F200B732F1 /* cartVC.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		69A72F13225BB8490033E6AC /* Auth */ = {
@@ -154,6 +197,8 @@
 			children = (
 				69A72F11225BB3EA0033E6AC /* API+AUTH.swift */,
 				69C19D6A225E5A6500C14259 /* API+Home.swift */,
+				69ADBE39226389000091A761 /* API+Cart.swift */,
+				6915C19822648A2700B732F1 /* API+Profile.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -220,6 +265,7 @@
 		69AF4A1F2259F19B00B88D16 /* cellClass */ = {
 			isa = PBXGroup;
 			children = (
+				6915C1A12264AFAC00B732F1 /* cart */,
 				69B191E2225F5C760044900D /* home */,
 			);
 			path = cellClass;
@@ -230,6 +276,8 @@
 			children = (
 				69AF4A0A2259EF1200B88D16 /* Main.storyboard */,
 				69A72F09225B92D30033E6AC /* searchResults.storyboard */,
+				6915C19622647F3700B732F1 /* setting.storyboard */,
+				6915C19F2264A33B00B732F1 /* cart.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -250,6 +298,7 @@
 				69D86926225CF8A30085653E /* searchVC.swift */,
 				69B191E3225F5CA10044900D /* searchdetailsVC.swift */,
 				69B191E6225F816B0044900D /* menuVC.swift */,
+				69ADBE362263600E0091A761 /* addToCartVC.swift */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -257,7 +306,9 @@
 		69D86925225CF8880085653E /* home */ = {
 			isa = PBXGroup;
 			children = (
+				6915C1A42264B3D200B732F1 /* Cart */,
 				69B191E5225F814E0044900D /* search */,
+				6915C19E2264968900B732F1 /* menu */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -331,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69AF4A28225A187300B88D16 /* TCM_____.TTF in Resources */,
+				6915C1A02264A33B00B732F1 /* cart.storyboard in Resources */,
 				69AF4A27225A187300B88D16 /* TCCB____.TTF in Resources */,
 				69AF4A112259EF1500B88D16 /* LaunchScreen.storyboard in Resources */,
 				69AF4A0E2259EF1500B88D16 /* Assets.xcassets in Resources */,
@@ -341,6 +393,7 @@
 				69AF4A30225A1EFE00B88D16 /* TCBI____.TTF in Resources */,
 				69AF4A31225A1EFE00B88D16 /* TCCM____.TTF in Resources */,
 				69AF4A2E225A1EFE00B88D16 /* TCMI____.TTF in Resources */,
+				6915C19722647F3700B732F1 /* setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,22 +457,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6915C1A62264B3F200B732F1 /* cartVC.swift in Sources */,
 				69AF4A24225A066C00B88D16 /* roundedView.swift in Sources */,
 				69B191E1225F5C710044900D /* searchCell.swift in Sources */,
 				69AF4A36225A5A3500B88D16 /* menueVC.swift in Sources */,
 				69AF4A34225A2F6E00B88D16 /* gredentButon.swift in Sources */,
+				6915C19B226490DF00B732F1 /* profileVC.swift in Sources */,
 				69D86927225CF8A30085653E /* searchVC.swift in Sources */,
+				6915C19D2264913F00B732F1 /* settingVC.swift in Sources */,
+				6915C1A32264AFEA00B732F1 /* cartCell.swift in Sources */,
 				69AF4A22225A015200B88D16 /* circleVIew.swift in Sources */,
 				69C19D69225E565300C14259 /* getCitys.swift in Sources */,
 				69A72F12225BB3EA0033E6AC /* API+AUTH.swift in Sources */,
 				69B191E9225F85450044900D /* maimMnueCell.swift in Sources */,
 				69D86929225D08E80085653E /* registerVC.swift in Sources */,
+				69ADBE3A226389000091A761 /* API+Cart.swift in Sources */,
 				69B191E7225F816B0044900D /* menuVC.swift in Sources */,
 				69A72F0C225BAF2B0033E6AC /* Cofig.swift in Sources */,
 				69AF4A092259EF1200B88D16 /* loginVC.swift in Sources */,
+				6915C19922648A2700B732F1 /* API+Profile.swift in Sources */,
 				69AF4A072259EF1200B88D16 /* AppDelegate.swift in Sources */,
 				69C19D67225E489500C14259 /* resetPasswordVC.swift in Sources */,
 				69B191E4225F5CA10044900D /* searchdetailsVC.swift in Sources */,
+				69ADBE372263600E0091A761 /* addToCartVC.swift in Sources */,
 				69A72F10225BB3270033E6AC /* showAlert.swift in Sources */,
 				69A72F0E225BB24E0033E6AC /* helper.swift in Sources */,
 				69C19D6B225E5A6500C14259 /* API+Home.swift in Sources */,

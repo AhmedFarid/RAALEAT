@@ -24,4 +24,9 @@ struct URLs {
     static let search = main + "search"
     static let getMenu = main + "getMenu"
     static let getMenuDetails = main + "getMenuDetails"
+    static let addCart = main + "auth/addCart"
+    static let plusCart = main + "plusCart"
+    static let minCart = main + "minCart"
+    static let authUser = main + "auth/user"
+    static let authMyCart = main + "auth/myCart"
 }

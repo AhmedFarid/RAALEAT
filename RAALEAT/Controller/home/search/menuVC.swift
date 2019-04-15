@@ -127,6 +127,20 @@ extension menuVC: UITableViewDataSource,UITableViewDelegate{
        
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "suge", sender: meal[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destaiantion = segue.destination as? addToCartVC{
+            destaiantion.singleItem = sender as? meals
+            destaiantion.desc = singleItem?.name ?? ""
+            destaiantion.image = singleItem?.image ?? ""
+            destaiantion.rate = singleItem?.rating ?? ""
+            
+        }
+    }
+    
     
 }
 

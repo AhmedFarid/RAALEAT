@@ -99,7 +99,7 @@ class API_AUTH: NSObject {
     
     
     
-    class func register(firstName: String,email: String, password: String,phone: String,address:String, completion: @escaping (_ error: Error?, _ success: Bool,_ status: Bool?, _ data: String?)->Void) {
+    class func register(firstName: String,email: String, password: String,phone: String,address:String, completion: @escaping (_ error: Error?, _ success: Bool, _ data: String?)->Void) {
         
         let url = URLs.register
         print(url)
@@ -122,21 +122,19 @@ class API_AUTH: NSObject {
             switch response.result
             {
             case .failure(let error):
-                completion(error, false, false,nil)
+                completion(error, false, nil)
                 print(error)
             case .success(let value):
                 let json = JSON(value)
                 print(value)
-                if let status = json["status"].bool {
-                    if status == true{
-                        if let data = json["data"].string{
-                            completion(nil, true ,status, data)
-                        }
-                    }else {
-                        let data = json["error"].string
-                        print(data ?? "no")
-                        completion(nil, true,status, data)
-                    }
+                if let user_token = json["access_token"].string, let token_type = json["token_type"].string, let expires_at = json["expires_at"].string  {
+                    print("user token \(user_token)")
+                    helper.saveAPIToken(access_token: user_token, token_type: token_type, expires_at: expires_at)
+                    completion(nil, true , nil)
+                }else {
+                    let data = json["error"].string
+                    print(data ?? "no")
+                    completion(nil, true, data)
                 }
                 
             }

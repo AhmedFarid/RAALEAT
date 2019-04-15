@@ -101,59 +101,43 @@ class registerVC: UIViewController {
         self.spiner.startAnimating()
         self.spiner.isHidden = false
         
-        API_AUTH.register(firstName: fristNameTF.text ?? "", email: emailTF.text ?? "", password: passwordTF.text ?? "", phone: phoneWithoutSpace, address: locTF.text ?? ""){ (error: Error?, success: Bool,statuse, data)  in
+        API_AUTH.register(firstName: fristNameTF.text ?? "", email: emailTF.text ?? "", password: passwordTF.text ?? "", phone: phoneWithoutSpace, address: locTF.text ?? ""){ (error: Error?, success: Bool, data)  in
             if success {
                 if data == nil {
                     print("success")
                 }else {
-                    if statuse == true {
-                        // create the alert
-                        let alert = UIAlertController(title: "register", message:  "\(data ?? "")", preferredStyle: UIAlertController.Style.alert)
-                        
-                        // add the actions (buttons)
-                        alert.addAction(UIAlertAction(title: "Login", style: UIAlertAction.Style.default, handler: { action in
-                            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "er")
-                            self.present(vc, animated: true, completion: nil)
-                        }))
-                        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
-                        
-                        // show the alert
-                        self.present(alert, animated: true, completion: nil)
-                    }else {
-                         self.showAlert(title: "register", message: "\(data ?? "")")
-                    }
-                   
+                    self.showAlert(title: "Login Filed", message: "\(data ?? "")")
                 }
                 //
             }else {
-                self.showAlert(title: "register", message: "\(data ?? "")")
+                self.showAlert(title: "Login Filed", message: "\(data ?? "")")
             }
             
             self.spiner.stopAnimating()
             self.spiner.isHidden = true
             
         }
-        
     }
+
+
+func isValidEmail(testStr:String) -> Bool {
+    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     
-    func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: testStr)
-    }
+    let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+    return emailTest.evaluate(with: testStr)
+}
+
+func isValidInput(Input:String) -> Bool {
+    let myCharSet=CharacterSet(charactersIn:"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    let output: String = Input.trimmingCharacters(in: myCharSet.inverted)
+    let isValid: Bool = (Input == output)
+    print("\(isValid)")
     
-    func isValidInput(Input:String) -> Bool {
-        let myCharSet=CharacterSet(charactersIn:"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-        let output: String = Input.trimmingCharacters(in: myCharSet.inverted)
-        let isValid: Bool = (Input == output)
-        print("\(isValid)")
-        
-        return isValid
-    }
-    
-   
-    
+    return isValid
+}
+
+
+
 }
 
 extension registerVC: FPNTextFieldDelegate {

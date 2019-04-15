@@ -109,3 +109,26 @@ class meals: NSObject {
     }
 }
 
+class cart: NSObject {
+    
+    var cartId: Int
+    var mealName: String
+    var mealPrice: String
+    var mealImage: String
+    var qty: String
+    var totalPrice: Double
+    
+    
+    init?(dict: [String: JSON]){
+        
+        guard let cartId = dict["cartId"]?.int,let mealName = dict["mealName"]?.string,let mealPrice = dict["mealPrice"]?.string,let mealImage = dict["mealImage"]?.string,let qty = dict["qty"]?.string,let totalPrice = dict["totalPrice"]?.double else {return nil}
+        self.cartId = cartId
+        self.mealName = mealName
+        self.mealPrice = mealPrice
+        self.mealImage = mealImage
+        self.qty = qty
+        self.totalPrice = totalPrice
+        
+    }
+}
+
