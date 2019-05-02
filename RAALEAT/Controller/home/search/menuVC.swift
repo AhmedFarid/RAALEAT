@@ -39,6 +39,7 @@ class menuVC: UIViewController {
         
         setUPdetials()
         handleRefreshgetMeune()
+        //tap()
     }
     
     
@@ -46,6 +47,7 @@ class menuVC: UIViewController {
     
     func setUPdetials(){
         self.reate.rating = Double(singleItem?.rating ?? "") ?? 0
+        reate.text = "\(singleItem?.countRating ?? 0)"
         reate.settings.updateOnTouch = false
         self.des.text = singleItem?.name
         image.image = UIImage(named: "3")
@@ -88,7 +90,7 @@ class menuVC: UIViewController {
     @objc private func handleRefreshgetMeune() {
         spiner.startAnimating()
         spiner.isHidden = false
-        API_Home.meanMenue(restaurant_id: 1){(error: Error?,status,data,mainMnues: [mainMnue]?) in
+        API_Home.meanMenue(restaurant_id: singleItem?.id ?? 0){(error: Error?,status,data,mainMnues: [mainMnue]?) in
             if status == true {
                 if let mainMnues = mainMnues {
                     self.mainMnues = mainMnues
@@ -137,6 +139,7 @@ extension menuVC: UITableViewDataSource,UITableViewDelegate{
             destaiantion.desc = singleItem?.name ?? ""
             destaiantion.image = singleItem?.image ?? ""
             destaiantion.rate = singleItem?.rating ?? ""
+            destaiantion.totalRate = singleItem?.countRating ?? 0
             
         }
     }

@@ -1,25 +1,19 @@
 //
-//  searchdetailsVC.swift
+//  offersVC.swift
 //  RAALEAT
 //
-//  Created by Farido on 4/11/19.
+//  Created by Farido on 4/16/19.
 //  Copyright © 2019 Farido. All rights reserved.
 //
 
 import UIKit
 
-class searchdetailsVC: UIViewController {
-    
-    @IBOutlet weak var spiner: UIActivityIndicatorView!
+class offersVC: UIViewController {
+
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spiner: UIActivityIndicatorView!
     
-    var searh = [searchs]()
-    var city_id: Int?
-    var type_id: Int?
-    var state_id: Int?
-    
-    
-    
+    var offer = [offers]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,23 +24,19 @@ class searchdetailsVC: UIViewController {
         spiner.isHidden = true
         handleRefreshgetType()
         //tap()
-        
-     
-        
     }
-    
     
     @objc private func handleRefreshgetType() {
         spiner.startAnimating()
         spiner.isHidden = false
-        API_Home.search(city_id: city_id ?? 1, type_id: type_id ?? 1, state_id: state_id ?? 1){(error: Error?,status,data,searh: [searchs]?) in
+        API_Offers.offoers{(error: Error?,status,data,offer: [offers]?) in
             if status == true {
-            if let searh = searh {
-                self.searh = searh
-                print("xxx\(self.searh)")
-                
-                self.tableView.reloadData()
-            }
+                if let offer = offer {
+                    self.offer = offer
+                    print("xxx\(self.offer)")
+                    
+                    self.tableView.reloadData()
+                }
             }else  {
                 self.showAlert(title: "Food", message: data ?? "")
             }
@@ -59,9 +49,9 @@ class searchdetailsVC: UIViewController {
     
 }
 
-extension searchdetailsVC: UITableViewDelegate,UITableViewDataSource {
+extension offersVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searh.count
+        return offer.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,24 +59,25 @@ extension searchdetailsVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? searchCell{
-            let food = searh[indexPath.item]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? offerscell{
+            let food = offer[indexPath.item]
             cell.configuerCell(prodect: food)
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
             return cell
         }else {
-            return searchCell()
+            return offerscell()
         }
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "suge", sender: searh[indexPath.row])
+        performSegue(withIdentifier: "suge", sender: offer[indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destaiantion = segue.destination as? menuVC{
-            destaiantion.singleItem = sender as? searchs
+        if let destaiantion = segue.destination as? offersMenueVC{
+            destaiantion.singleItem = sender as? offers
         }
     }
 }
+

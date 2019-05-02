@@ -21,7 +21,15 @@ class profileVC: UIViewController {
         super.viewDidLoad()
         spiner.isHidden = true
         handleRefshProfile()
+        //tap()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        spiner.isHidden = true
+        handleRefshProfile()
+    }
+    
     
     func handleRefshProfile(){
         spiner.startAnimating()
@@ -40,10 +48,6 @@ class profileVC: UIViewController {
                 self.spiner.stopAnimating()
                 self.spiner.isHidden = true
             }
-            
         }
     }
-    
-    
-    
 }

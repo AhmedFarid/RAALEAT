@@ -13,6 +13,7 @@ class resetPasswordVC: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tap()
     }
 
     @IBAction func restBTN(_ sender: Any) {

@@ -207,7 +207,7 @@ class API_Home: NSObject {
                 let json = JSON(value)
                 if let status = json["status"].bool {
                     if status == true{
-                        guard let dataArray = json["data"].array else{
+                        guard let dataArray = json["data"]["data"].array else{
                             completion(nil, status ,nil,nil)
                             return
                         }

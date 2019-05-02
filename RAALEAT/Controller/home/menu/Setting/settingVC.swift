@@ -20,7 +20,7 @@ class settingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //tap()
         
         guard helper.getAPIToken().access_token != nil else {
             acoutInfo.isHidden = true

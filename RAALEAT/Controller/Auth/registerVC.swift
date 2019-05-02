@@ -164,7 +164,7 @@ extension registerVC: FPNTextFieldDelegate {
 extension registerVC: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField.tag == 1 {
-            if string.rangeOfCharacter(from: .letters) != nil || string == " "{
+            if string.rangeOfCharacter(from: .letters) != nil || string == " " || string == ""{
                 return true
             }else {
                 showAlert(title: "register", message: "Enter alphabet not numbers")

@@ -1,29 +1,28 @@
 //
-//  searchCell.swift
+//  offerscell.swift
 //  RAALEAT
 //
-//  Created by Farido on 4/11/19.
+//  Created by Farido on 4/16/19.
 //  Copyright © 2019 Farido. All rights reserved.
 //
 
 import UIKit
 import Cosmos
-import Kingfisher
 
-class searchCell: UITableViewCell {
-    
+class offerscell: UITableViewCell {
+
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var images: UIImageView!
-    @IBOutlet weak var cosmos: CosmosView!
+    @IBOutlet weak var reate: CosmosView!
     
-    func configuerCell(prodect: searchs) {
-        self.name.text = prodect.name
-        self.cosmos.rating = Double(prodect.rating) ?? 0
-        cosmos.text = "\(prodect.countRating)"
-        cosmos.settings.updateOnTouch = false
+
+    func configuerCell(prodect: offers) {
+        self.name.text = prodect.restaurantName
+        self.reate.rating = 4.0
+        reate.settings.updateOnTouch = false
         
         images.image = UIImage(named: "3")
-        let s = ("\(URLs.mainImage)\(prodect.logo)")
+        let s = prodect.restaurantLogo
         let encodedLink = s.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         let encodedURL = NSURL(string: encodedLink!)! as URL
         

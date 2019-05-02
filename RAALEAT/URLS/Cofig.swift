@@ -12,7 +12,7 @@ import Foundation
 struct URLs {
     
     static let main = "http://raaleat.com/site/public/api/"
-    static let mainImage = "http://raaleat.com/site/"
+    static let mainImage = ""
     
     
     static let login = main + "login"
@@ -29,4 +29,12 @@ struct URLs {
     static let minCart = main + "minCart"
     static let authUser = main + "auth/user"
     static let authMyCart = main + "auth/myCart"
+    static let authPlusCart = main + "auth/plusCart"
+    static let authMinCart = main + "auth/minCart"
+    static let authUpdateProfile = main + "auth/updateProfile"
+    static let authUpdatePassword = main + "auth/updatePassword"
+    static let getOffersRestaurant = main + "getOffersRestaurant"
+    static let getOffers = main + "getOffers"
+    static let authDeleteCart = main + "auth/deleteCart"
+    static let authMyWallets = main + "auth/myWallets"
 }

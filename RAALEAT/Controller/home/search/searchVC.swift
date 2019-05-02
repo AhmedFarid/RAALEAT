@@ -51,7 +51,29 @@ class searchVC: UIViewController {
 
         
     }
+    func createToolbar() {
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        //Customizations
+        toolBar.barTintColor = .black
+        toolBar.tintColor = .white
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(searchVC.dismissKeyboard))
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        city.inputAccessoryView = toolBar
+        state.inputAccessoryView = toolBar
+        food.inputAccessoryView = toolBar
+    }
     
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     @objc private func handleRefreshgetCity() {
         API_Home.myorder{ (error: Error?, getCity: [getCitys]?) in
@@ -66,6 +88,7 @@ class searchVC: UIViewController {
     }
     
     @objc private func handleRefreshgetStates() {
+        state.text = ""
         API_Home.getState(city_id: "\(citys)"){ (error: Error?, getState: [getStates]?) in
             if let getState = getState {
                 self.getState = getState
@@ -92,20 +115,23 @@ class searchVC: UIViewController {
     
     
     func textEnabeld() {
-        if getCity.isEmpty == true {
-            city.isEnabled = false
-        }else {
-            city.isEnabled = true
-        }
+        
         if getState.isEmpty == true {
             state.isEnabled = false
         }else {
             state.isEnabled = true
         }
-        if getType.isEmpty == true {
-            state.isEnabled = false
+        
+        if getCity.isEmpty == true {
+            city.isEnabled = false
         }else {
-            state.isEnabled = true
+            city.isEnabled = true
+        }
+        
+        if getType.isEmpty == true {
+            food.isEnabled = false
+        }else {
+            food.isEnabled = true
         }
     }
     
@@ -159,6 +185,21 @@ class searchVC: UIViewController {
             return
         }
         
+        guard let citys = city.text, !citys.isEmpty else {
+            let messages = NSLocalizedString("enter your city", comment: "hhhh")
+            let title = NSLocalizedString("Search Filed", comment: "hhhh")
+            self.showAlert(title: title, message: messages)
+            return
+        }
+        
+        
+        guard let states = state.text, !states.isEmpty else {
+            let messages = NSLocalizedString("enter your State", comment: "hhhh")
+            let title = NSLocalizedString("Search Filed", comment: "hhhh")
+            self.showAlert(title: title, message: messages)
+            return
+        }
+        
         performSegue(withIdentifier: "suge", sender: nil)
         
     }
@@ -204,16 +245,16 @@ extension searchVC: UIPickerViewDelegate, UIPickerViewDataSource {
             city.text = getCity[row].name
             citys = getCity[row].id
             createStatusPiker()
-            self.view.endEditing(false)
+            //self.view.endEditing(false)
         }else if pickerView.tag == 1{
             state.text = getState[row].name
             statec = getState[row].id
-            self.view.endEditing(false)
+            //self.view.endEditing(false)
             
         }else{
             food.text = getType[row].name
             typec = getType[row].id
-            self.view.endEditing(false)
+            //self.view.endEditing(false)
         }
     }
 }

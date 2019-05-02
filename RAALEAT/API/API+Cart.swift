@@ -120,4 +120,145 @@ class API_Cart: NSObject {
         }
     }
     
+    class func plusCart(menu_details_id: Int, completion: @escaping (_ error: Error?, _ success: Bool,_ status: Bool?, _ data: String?,_ errors: String?)->Void) {
+        
+        let url = URLs.authPlusCart
+        
+        guard let user_token = helper.getAPIToken().access_token else {
+            completion(nil,false,false,nil,nil)
+            return
+        }
+        
+        print(url)
+        let parameters = [
+            "menu_details_id": menu_details_id,
+            ] as [String : Any]
+        
+        let headers = [
+            "Authorization": "Bearer \(user_token)"
+        ]
+        
+        print(headers)
+        print(parameters)
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers) .responseJSON { response in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,false, nil,nil)
+                print(error)
+                //self.showAlert(title: "Error", message: "\(error)")
+                
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+                if let status = json["status"].bool {
+                    if status == true{
+                        let data = json["data"].string
+                        print(data ?? "no")
+                        completion(nil, true,status,data,nil)
+                    }else {
+                        let errors = json["error"].string
+                        print(errors ?? "no")
+                        completion(nil, false,status,errors,errors)
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    class func mainCart(menu_details_id: Int, completion: @escaping (_ error: Error?, _ success: Bool,_ status: Bool?, _ data: String?,_ errors: String?)->Void) {
+        
+        let url = URLs.authMinCart
+        
+        guard let user_token = helper.getAPIToken().access_token else {
+            completion(nil,false,false,nil,nil)
+            return
+        }
+        
+        print(url)
+        let parameters = [
+            "menu_details_id": menu_details_id,
+            ] as [String : Any]
+        
+        let headers = [
+            "Authorization": "Bearer \(user_token)"
+        ]
+        
+        print(headers)
+        print(parameters)
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers) .responseJSON { response in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,false, nil,nil)
+                print(error)
+                //self.showAlert(title: "Error", message: "\(error)")
+                
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+                if let status = json["status"].bool {
+                    if status == true{
+                        let data = json["data"].string
+                        print(data ?? "no")
+                        completion(nil, true,status,data,nil)
+                    }else {
+                        let errors = json["error"].string
+                        print(errors ?? "no")
+                        completion(nil, false,status,errors,errors)
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    class func deletCart(menu_details_id: Int, completion: @escaping (_ error: Error?, _ success: Bool,_ status: Bool?, _ data: String?,_ errors: String?)->Void) {
+        
+        let url = URLs.authDeleteCart
+        
+        guard let user_token = helper.getAPIToken().access_token else {
+            completion(nil,false,false,nil,nil)
+            return
+        }
+        
+        print(url)
+        let parameters = [
+            "menu_details_id": menu_details_id,
+            ] as [String : Any]
+        
+        let headers = [
+            "Authorization": "Bearer \(user_token)"
+        ]
+        
+        print(headers)
+        print(parameters)
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers) .responseJSON { response in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,false, nil,nil)
+                print(error)
+                //self.showAlert(title: "Error", message: "\(error)")
+                
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+                if let status = json["status"].bool {
+                    if status == true{
+                        let data = json["data"].string
+                        print(data ?? "no")
+                        completion(nil, true,status,data,nil)
+                    }else {
+                        let errors = json["error"].string
+                        print(errors ?? "no")
+                        completion(nil, false,status,errors,errors)
+                    }
+                }
+                
+            }
+        }
+    }
+    
 }

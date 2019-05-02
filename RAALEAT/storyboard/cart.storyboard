@@ -46,7 +46,7 @@
                                                     <color key="textColor" red="0.86666666670000003" green="0.42352941179999998" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fCy-sR-HIg">
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fCy-sR-HIg">
                                                     <rect key="frame" x="148.5" y="42" width="89.5" height="24.5"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbR-ds-Wlw">
@@ -67,6 +67,15 @@
                                                             <state key="normal" image="Group 91"/>
                                                             <connections>
                                                                 <action selector="main:" destination="Wln-0U-Hwk" eventType="touchUpInside" id="tBp-Xn-9Fl"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtv-MK-4I3">
+                                                            <rect key="frame" x="21.5" y="-3" width="46" height="30"/>
+                                                            <state key="normal" title="Delete">
+                                                                <color key="titleColor" red="0.86666666670000003" green="0.42352941179999998" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="deletes:" destination="Wln-0U-Hwk" eventType="touchUpInside" id="CAw-FP-sGE"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -105,6 +114,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="delletBTN" destination="3IJ-lm-U3T" id="3PK-hY-6Xp"/>
                                             <outlet property="mellImag" destination="0uL-9V-VMK" id="MH4-Gf-0S8"/>
                                             <outlet property="mellName" destination="eJm-UG-nsg" id="lLT-4h-7N2"/>
                                             <outlet property="price" destination="lLw-cy-DaB" id="OUv-Ru-wEJ"/>
@@ -146,9 +156,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="p91-P1-SRV" firstAttribute="top" secondItem="P3x-bv-L4R" secondAttribute="top" id="1YY-l0-S1c"/>
-                            <constraint firstItem="3wA-cS-F51" firstAttribute="leading" secondItem="P3x-bv-L4R" secondAttribute="leadingMargin" id="1s8-R7-qf4"/>
                             <constraint firstItem="3wA-cS-F51" firstAttribute="top" secondItem="S5o-mt-gTK" secondAttribute="bottom" id="5em-VO-Bt8"/>
                             <constraint firstItem="eJm-UG-nsg" firstAttribute="leading" secondItem="0uL-9V-VMK" secondAttribute="trailing" constant="8" id="9n7-B7-bSP"/>
+                            <constraint firstItem="3wA-cS-F51" firstAttribute="leading" secondItem="gWh-Dg-gJ2" secondAttribute="leading" id="Buf-Zi-DEH"/>
                             <constraint firstItem="p91-P1-SRV" firstAttribute="leading" secondItem="gWh-Dg-gJ2" secondAttribute="leading" id="DC6-MG-Yds"/>
                             <constraint firstItem="eJm-UG-nsg" firstAttribute="leading" secondItem="0uL-9V-VMK" secondAttribute="trailing" constant="8" id="Djo-3y-cea"/>
                             <constraint firstItem="S5o-mt-gTK" firstAttribute="top" secondItem="p91-P1-SRV" secondAttribute="bottom" id="Dyn-Qd-r6i"/>
@@ -159,12 +169,12 @@
                             <constraint firstItem="p91-P1-SRV" firstAttribute="trailing" secondItem="gWh-Dg-gJ2" secondAttribute="trailing" id="UkR-3S-y84"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eJm-UG-nsg" secondAttribute="trailing" constant="23" id="ZDu-Qb-Gm8"/>
                             <constraint firstItem="LvJ-OO-cz8" firstAttribute="centerY" secondItem="P3x-bv-L4R" secondAttribute="centerY" id="Zeh-aH-3S6"/>
-                            <constraint firstItem="3wA-cS-F51" firstAttribute="trailing" secondItem="P3x-bv-L4R" secondAttribute="trailingMargin" id="bUH-6s-zyR"/>
                             <constraint firstItem="LvJ-OO-cz8" firstAttribute="centerX" secondItem="P3x-bv-L4R" secondAttribute="centerX" id="d4x-Cz-jve"/>
                             <constraint firstItem="S5o-mt-gTK" firstAttribute="leading" secondItem="P3x-bv-L4R" secondAttribute="leadingMargin" id="dAy-g1-kg3"/>
                             <constraint firstItem="eJm-UG-nsg" firstAttribute="top" secondItem="0uL-9V-VMK" secondAttribute="top" id="gVx-pf-5oJ"/>
                             <constraint firstItem="3wA-cS-F51" firstAttribute="bottom" secondItem="P3x-bv-L4R" secondAttribute="bottomMargin" id="hjD-fS-jTr"/>
                             <constraint firstItem="fCy-sR-HIg" firstAttribute="centerX" secondItem="eJm-UG-nsg" secondAttribute="centerX" id="hzI-EK-iGD"/>
+                            <constraint firstItem="3wA-cS-F51" firstAttribute="trailing" secondItem="gWh-Dg-gJ2" secondAttribute="trailing" id="j4x-4N-qlW"/>
                             <constraint firstItem="fCy-sR-HIg" firstAttribute="top" secondItem="eJm-UG-nsg" secondAttribute="bottom" constant="8" id="lbK-YS-ZBS"/>
                             <constraint firstItem="S5o-mt-gTK" firstAttribute="trailing" secondItem="P3x-bv-L4R" secondAttribute="trailingMargin" id="z6Y-5a-6JO"/>
                         </constraints>

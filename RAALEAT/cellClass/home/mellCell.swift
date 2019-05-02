@@ -12,9 +12,11 @@ class mellCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var images: UIImageView!
+    @IBOutlet weak var des: UILabel!
     
     func configuerCell(prodect: meals) {
         self.name.text = prodect.name
+        self.des.text = prodect.descriptio	
         
         images.image = UIImage(named: "3")
         let s = ("\(URLs.mainImage)\(prodect.image)")

@@ -15,9 +15,11 @@ class cartCell: UITableViewCell {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var totolPrice: UILabel!
     @IBOutlet weak var qnt: UILabel!
+    @IBOutlet weak var delletBTN: UIButton!
     
     
     var add: (()->())?
+    var delete: (()->())?
     var min: (()->())?
     
     
@@ -40,6 +42,9 @@ class cartCell: UITableViewCell {
         }
     }
 
+    @IBAction func deletes(_ sender: Any) {
+        delete?()
+    }
     @IBAction func add(_ sender: Any) {
         add?()
     }

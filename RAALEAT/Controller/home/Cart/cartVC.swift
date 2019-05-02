@@ -16,6 +16,7 @@ class cartVC: UIViewController {
     @IBOutlet weak var totlaPrice: UILabel!
     
     
+    
     var carts = [cart]()
     var cartCount = 0.0
     
@@ -27,6 +28,7 @@ class cartVC: UIViewController {
         
         spiner.isHidden = true
         handleRefreshgetType()
+        //tap()
     }
     
     @IBAction func order(_ sender: Any) {
@@ -41,6 +43,71 @@ class cartVC: UIViewController {
         
         
     }
+    
+     func handleRefreshgetBlusCart(_ Id: Int?) {
+        spiner.startAnimating()
+        spiner.isHidden = false
+        API_Cart.plusCart(menu_details_id: Id ?? 0) { (erroe: Error?, Success,status ,data,errors)  in
+            if Success {
+                if status == true {
+                    self.showAlert(title: "Add to cart", message: data ?? "")
+                }else {
+                    self.showAlert(title: "Add to cart", message: errors ?? "")
+                }
+            }else{
+                self.showAlert(title: "Add to cart", message: errors ?? "")
+            }
+            self.handleRefreshgetType()
+            self.spiner.stopAnimating()
+            self.spiner.isHidden = true
+        }
+        
+    }
+    
+    func handleRefreshgetMainCart(_ Id: Int?) {
+        spiner.startAnimating()
+        spiner.isHidden = false
+        API_Cart.mainCart(menu_details_id: Id ?? 0) { (erroe: Error?, Success,status ,data,errors)  in
+            if Success {
+                if status == true {
+                    self.showAlert(title: "Add to cart", message: data ?? "")
+                }else {
+                    self.showAlert(title: "Add to cart", message: errors ?? "")
+                }
+            }else{
+                self.showAlert(title: "Add to cart", message: errors ?? "")
+            }
+            self.handleRefreshgetType()
+            self.spiner.stopAnimating()
+            self.spiner.isHidden = true
+            
+        }
+        
+    }
+    
+    func handleRefreshgetDeleteCart(_ Id: Int?) {
+        spiner.startAnimating()
+        spiner.isHidden = false
+        API_Cart.deletCart(menu_details_id: Id ?? 0) { (erroe: Error?, Success,status ,data,errors)  in
+            if Success {
+                if status == true {
+                    self.showAlert(title: "Add to cart", message: data ?? "")
+                }else {
+                    self.showAlert(title: "Add to cart", message: errors ?? "")
+                }
+            }else{
+                self.showAlert(title: "Add to cart", message: errors ?? "")
+            }
+            self.handleRefreshgetType()
+            self.spiner.stopAnimating()
+            self.spiner.isHidden = true
+            
+        }
+        
+    }
+    
+    
+    
     @objc private func handleRefreshgetType() {
         spiner.startAnimating()
         spiner.isHidden = false
@@ -78,21 +145,49 @@ extension cartVC: UITableViewDelegate,UITableViewDataSource {
             let food = carts[indexPath.item]
             cell.configuerCell(prodect: food)
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            
+            cell.add = {
+                
+                guard (helper.getAPIToken().access_token != nil)  else {
+                    let message = NSLocalizedString("please login frist", comment: "hhhh")
+                    let title = NSLocalizedString("Filed to request order", comment: "profuct list lang")
+                    self.showAlert(title: title, message: message)
+                    return
+                }
+                self.handleRefreshgetBlusCart(Int(food.menuDetailsId))
+            }
+            
+            cell.delete = {
+                guard (helper.getAPIToken().access_token != nil)  else {
+                    let message = NSLocalizedString("please login frist", comment: "hhhh")
+                    let title = NSLocalizedString("Filed to request order", comment: "profuct list lang")
+                    self.showAlert(title: title, message: message)
+                    return
+                }
+                self.handleRefreshgetDeleteCart(Int(food.menuDetailsId))
+            }
+                
+            if food.qty != "1" {
+                
+                cell.delletBTN.isEnabled = true
+                cell.min = {
+                    
+                    guard (helper.getAPIToken().access_token != nil)  else {
+                        let message = NSLocalizedString("please login frist", comment: "hhhh")
+                        let title = NSLocalizedString("Filed to request order", comment: "profuct list lang")
+                        self.showAlert(title: title, message: message)
+                        return
+                    }
+                    self.handleRefreshgetMainCart(Int(food.menuDetailsId))
+                }
+            }else {
+                cell.delletBTN.isEnabled = false
+            }
             return cell
         }else {
             return cartCell()
         }
         
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "suge", sender: searh[indexPath.row])
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destaiantion = segue.destination as? menuVC{
-//            destaiantion.singleItem = sender as? searchs
-////        }
-//    }
 }
 

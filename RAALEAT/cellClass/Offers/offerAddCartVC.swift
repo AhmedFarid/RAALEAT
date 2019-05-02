@@ -1,16 +1,16 @@
 //
-//  addToCartVC.swift
+//  offerAddCartVC.swift
 //  RAALEAT
 //
-//  Created by Farido on 4/14/19.
+//  Created by Farido on 4/16/19.
 //  Copyright © 2019 Farido. All rights reserved.
 //
 
 import UIKit
 import Cosmos
 
-class addToCartVC: UIViewController {
-    
+class offerAddCartVC: UIViewController {
+
     @IBOutlet weak var reate: CosmosView!
     @IBOutlet weak var mealName: UILabel!
     @IBOutlet weak var mealImage: UIImageView!
@@ -18,37 +18,26 @@ class addToCartVC: UIViewController {
     @IBOutlet weak var images: UIImageView!
     @IBOutlet weak var quntity: UILabel!
     @IBOutlet weak var mainCart: UIButton!
-    @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var dse2: UILabel!
-    
     
     var desc = ""
     var rate = ""
-    var totalRate = 0
     var image = ""
-    var totalReate = ""
     var qty = 1
-    var prices = ""
-    var priod = ""
+    
     
     var singleItem: meals?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUPdetials()
-        //tap()
+        tap()
     }
     
     func setUPdetials(){
         self.reate.rating = Double(rate) ?? 0
-        self.reate.text = "\(totalRate)"
         reate.settings.updateOnTouch = false
         self.des.text = desc
-        self.dse2.text = singleItem?.descriptio
         self.mealName.text = singleItem?.name ?? ""
-        self.price.text = "\(singleItem?.price ?? 0) SAR"
-        self.time.text = "\(singleItem?.period ?? "") min"
         images.image = UIImage(named: "3")
         let s = ("\(URLs.mainImage)\(image)")
         let encodedLink = s.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
@@ -81,12 +70,12 @@ class addToCartVC: UIViewController {
         if qty == 0{
             mainCart.isEnabled = false
         }else {
-        self.qty = qty - 1
-        self.quntity.text = "\(qty)"
+            self.qty = qty - 1
+            self.quntity.text = "\(qty)"
         }
     }
     @IBAction func addTocart(_ sender: Any) {
-         guard helper.getAPIToken().access_token != nil else{
+        guard helper.getAPIToken().access_token != nil else{
             self.showAlert(title:"Plz login frist", message: "Plz login frist")
             return
         }

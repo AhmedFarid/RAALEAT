@@ -1,16 +1,16 @@
 //
-//  addToCartVC.swift
+//  offerAddCartVC.swift
 //  RAALEAT
 //
-//  Created by Farido on 4/14/19.
+//  Created by Farido on 4/16/19.
 //  Copyright © 2019 Farido. All rights reserved.
 //
 
 import UIKit
 import Cosmos
 
-class addToCartVC: UIViewController {
-    
+class offerAddCartVC: UIViewController {
+
     @IBOutlet weak var reate: CosmosView!
     @IBOutlet weak var mealName: UILabel!
     @IBOutlet weak var mealImage: UIImageView!
@@ -18,21 +18,13 @@ class addToCartVC: UIViewController {
     @IBOutlet weak var images: UIImageView!
     @IBOutlet weak var quntity: UILabel!
     @IBOutlet weak var mainCart: UIButton!
-    @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var dse2: UILabel!
-    
     
     var desc = ""
-    var rate = ""
-    var totalRate = 0
     var image = ""
-    var totalReate = ""
     var qty = 1
-    var prices = ""
-    var priod = ""
     
-    var singleItem: meals?
+    
+    var singleItem: offerMenues?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,16 +33,12 @@ class addToCartVC: UIViewController {
     }
     
     func setUPdetials(){
-        self.reate.rating = Double(rate) ?? 0
-        self.reate.text = "\(totalRate)"
+        self.reate.rating = 4.0
         reate.settings.updateOnTouch = false
         self.des.text = desc
-        self.dse2.text = singleItem?.descriptio
-        self.mealName.text = singleItem?.name ?? ""
-        self.price.text = "\(singleItem?.price ?? 0) SAR"
-        self.time.text = "\(singleItem?.period ?? "") min"
+        self.mealName.text = singleItem?.menuDetailsName ?? ""
         images.image = UIImage(named: "3")
-        let s = ("\(URLs.mainImage)\(image)")
+        let s = image
         let encodedLink = s.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         let encodedURL = NSURL(string: encodedLink!)! as URL
         images.kf.indicatorType = .activity
@@ -59,7 +47,7 @@ class addToCartVC: UIViewController {
             images.kf.setImage(with: url)
         }
         mealImage.image = UIImage(named: "3")
-        let ss = ("\(URLs.mainImage)\(singleItem?.image ?? "")")
+        let ss = singleItem?.menuDetailsImage ?? ""
         let encodedLinks = ss.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         let encodedURLs = NSURL(string: encodedLinks!)! as URL
         
@@ -81,17 +69,17 @@ class addToCartVC: UIViewController {
         if qty == 0{
             mainCart.isEnabled = false
         }else {
-        self.qty = qty - 1
-        self.quntity.text = "\(qty)"
+            self.qty = qty - 1
+            self.quntity.text = "\(qty)"
         }
     }
     @IBAction func addTocart(_ sender: Any) {
-         guard helper.getAPIToken().access_token != nil else{
+        guard helper.getAPIToken().access_token != nil else{
             self.showAlert(title:"Plz login frist", message: "Plz login frist")
             return
         }
         
-        API_Cart.addCart(menu_details_id: singleItem?.id ?? 0, qty: qty) { (erroe: Error?, Success,status ,data,errors)  in
+        API_Cart.addCart(menu_details_id: singleItem?.offerId ?? 0, qty: qty) { (erroe: Error?, Success,status ,data,errors)  in
             if Success {
                 if status == true {
                     self.showAlert(title: "Add to cart", message: data ?? "")
