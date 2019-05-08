@@ -129,6 +129,11 @@ class cartVC: UIViewController {
         
     }
     
+    
+    @IBAction func orderBtn(_ sender: Any) {
+        performSegue(withIdentifier: "suge", sender: nil)
+    }
+    
 }
 
 extension cartVC: UITableViewDelegate,UITableViewDataSource {

@@ -119,7 +119,7 @@ class cart: NSObject {
     
     var cartId: Int
     var mealName: String
-    var mealPrice: String
+    var mealPrice: Double
     var mealImage: String
     var qty: String
     var totalPrice: Double
@@ -128,7 +128,7 @@ class cart: NSObject {
     
     init?(dict: [String: JSON]){
         
-        guard let cartId = dict["cartId"]?.int,let mealName = dict["mealName"]?.string,let mealPrice = dict["mealPrice"]?.string,let mealImage = dict["mealImage"]?.string,let qty = dict["qty"]?.string,let totalPrice = dict["totalPrice"]?.double,let menuDetailsId = dict["menuDetailsId"]?.string else {return nil}
+        guard let cartId = dict["cartId"]?.int,let mealName = dict["mealName"]?.string,let mealPrice = dict["mealPrice"]?.double,let mealImage = dict["mealImage"]?.string,let qty = dict["qty"]?.string,let totalPrice = dict["totalPrice"]?.double,let menuDetailsId = dict["menuDetailsId"]?.string else {return nil}
         self.cartId = cartId
         self.mealName = mealName
         self.mealPrice = mealPrice
@@ -188,6 +188,77 @@ class offerMenues: NSObject {
         self.toTime = toTime
         self.toDate = toDate
         self.menuDetailsImage = menuDetailsImage
+    }
+}
+
+
+class waltePakages: NSObject {
+    
+    var id: Int
+    var name: String
+    var price: String
+    var point: String
+    
+    
+    init?(dict: [String: JSON]){
+        
+        guard let id = dict["id"]?.int,let name = dict["name"]?.string,let price = dict["price"]?.string,let point = dict["point"]?.string else {return nil}
+        
+        self.id = id
+        self.name = name
+        self.price = price
+        self.point = point
+        
+    }
+}
+
+class myOrders: NSObject {
+    
+    var orderId: Int
+    var amount: String
+    var amountDelivery: String
+    var typeShift: String
+    var status: String
+    var date: String
+    var time: String
+    var totalPrice: Int
+    
+    
+    
+    init?(dict: [String: JSON]){
+        
+        guard let orderId = dict["orderId"]?.int,let amount = dict["amount"]?.string,let amountDelivery = dict["amountDelivery"]?.string,let typeShift = dict["typeShift"]?.string,let status = dict["status"]?.string,let date = dict["date"]?.string,let time = dict["time"]?.string,let totalPrice = dict["totalPrice"]?.int else {return nil}
+        
+        self.orderId = orderId
+        self.amount = amount
+        self.amountDelivery = amountDelivery
+        self.typeShift = typeShift
+        self.status = status
+        self.date = date
+        self.time = time
+        self.totalPrice = totalPrice
+        
+        
+    }
+}
+
+class myOrderDetails: NSObject {
+    
+    var mealName: String
+    var price: String
+    var qty: String
+    var total: Int
+    
+    
+    
+    init?(dict: [String: JSON]){
+        
+        guard let mealName = dict["mealName"]?.string,let price = dict["price"]?.string,let qty = dict["qty"]?.string,let total = dict["total"]?.int  else {return nil}
+        
+        self.mealName = mealName
+        self.price = price
+        self.qty = qty
+        self.total = total
     }
 }
 

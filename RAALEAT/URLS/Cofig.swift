@@ -37,4 +37,9 @@ struct URLs {
     static let getOffers = main + "getOffers"
     static let authDeleteCart = main + "auth/deleteCart"
     static let authMyWallets = main + "auth/myWallets"
+    static let getPackage = main + "getPackage"
+    static let chargingWallets = main + "auth/chargingWallets"
+    static let authOrder = main + "auth/order"
+    static let authMyOrders = main + "auth/myOrders"
+    static let authMyOrderDetails = main + "auth/myOrderDetails"
 }

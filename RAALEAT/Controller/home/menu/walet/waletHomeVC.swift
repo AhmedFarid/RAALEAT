@@ -13,10 +13,12 @@ class waletHomeVC: UIViewController {
     @IBOutlet weak var myWalet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        handleRefshWallet()
+        
 
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        handleRefshWallet()
+    }
     func handleRefshWallet(){
         API_Wallet.myWallet { (error: Error?, Success, statues, amount, errors) in
             

@@ -30,7 +30,7 @@ class cartCell: UITableViewCell {
         totolPrice.text = "Total: \(prodect.totalPrice)"
         qnt.text = prodect.qty
         mellImag.image = UIImage(named: "3")
-        let s = ("\(URLs.mainImage)\(prodect.mealImage)")
+        let s = ("http://raaleat.com/site/\(prodect.mealImage)")
         let encodedLink = s.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         let encodedURL = NSURL(string: encodedLink!)! as URL
         

@@ -17,15 +17,23 @@
 		6915C1A62264B3F200B732F1 /* cartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6915C1A52264B3F200B732F1 /* cartVC.swift */; };
 		691F1CE22265DC65000E4C02 /* changePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F1CE12265DC65000E4C02 /* changePasswordVC.swift */; };
 		6997B7542264E823001C11DB /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6997B7532264E823001C11DB /* editProfileVC.swift */; };
+		699ED6222281CC9000DD872F /* API+Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699ED6212281CC9000DD872F /* API+Order.swift */; };
+		69A280882282E7E30054FB6B /* myOrders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A280872282E7E30054FB6B /* myOrders.storyboard */; };
+		69A2808B2282EF050054FB6B /* myOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2808A2282EF050054FB6B /* myOrdersVC.swift */; };
+		69A2808E2282F6190054FB6B /* myordersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2808D2282F6190054FB6B /* myordersCell.swift */; };
+		69A28090228303620054FB6B /* myorderDetilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2808F228303620054FB6B /* myorderDetilesVC.swift */; };
+		69A28092228306EF0054FB6B /* myOrderDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A28091228306EF0054FB6B /* myOrderDetailsCell.swift */; };
 		69A72F0A225B92D30033E6AC /* searchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A72F09225B92D30033E6AC /* searchResults.storyboard */; };
 		69A72F0C225BAF2B0033E6AC /* Cofig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0B225BAF2B0033E6AC /* Cofig.swift */; };
 		69A72F0E225BB24E0033E6AC /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0D225BB24E0033E6AC /* helper.swift */; };
 		69A72F10225BB3270033E6AC /* showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F0F225BB3270033E6AC /* showAlert.swift */; };
 		69A72F12225BB3EA0033E6AC /* API+AUTH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A72F11225BB3EA0033E6AC /* API+AUTH.swift */; };
+		69A7B2C72281962A002F9F1B /* orderCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B2C62281962A002F9F1B /* orderCartVC.swift */; };
 		69AB3B80227AFE4F00284141 /* wallat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AB3B7F227AFE4F00284141 /* wallat.storyboard */; };
 		69AB3B84227B06EA00284141 /* waletHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AB3B83227B06EA00284141 /* waletHomeVC.swift */; };
 		69AB3B86227B0A0600284141 /* API+Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AB3B85227B0A0600284141 /* API+Wallet.swift */; };
 		69AB3B88227B135400284141 /* bakagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AB3B87227B135400284141 /* bakagesVC.swift */; };
+		69AB3B8A227B18FB00284141 /* PoakageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AB3B89227B18FB00284141 /* PoakageCell.swift */; };
 		69ADBE372263600E0091A761 /* addToCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADBE362263600E0091A761 /* addToCartVC.swift */; };
 		69ADBE3A226389000091A761 /* API+Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADBE39226389000091A761 /* API+Cart.swift */; };
 		69AF4A072259EF1200B88D16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF4A062259EF1200B88D16 /* AppDelegate.swift */; };
@@ -74,15 +82,23 @@
 		6915C1A52264B3F200B732F1 /* cartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartVC.swift; sourceTree = "<group>"; };
 		691F1CE12265DC65000E4C02 /* changePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordVC.swift; sourceTree = "<group>"; };
 		6997B7532264E823001C11DB /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
+		699ED6212281CC9000DD872F /* API+Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Order.swift"; sourceTree = "<group>"; };
+		69A280872282E7E30054FB6B /* myOrders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = myOrders.storyboard; sourceTree = "<group>"; };
+		69A2808A2282EF050054FB6B /* myOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOrdersVC.swift; sourceTree = "<group>"; };
+		69A2808D2282F6190054FB6B /* myordersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myordersCell.swift; sourceTree = "<group>"; };
+		69A2808F228303620054FB6B /* myorderDetilesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myorderDetilesVC.swift; sourceTree = "<group>"; };
+		69A28091228306EF0054FB6B /* myOrderDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOrderDetailsCell.swift; sourceTree = "<group>"; };
 		69A72F09225B92D30033E6AC /* searchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = searchResults.storyboard; sourceTree = "<group>"; };
 		69A72F0B225BAF2B0033E6AC /* Cofig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cofig.swift; sourceTree = "<group>"; };
 		69A72F0D225BB24E0033E6AC /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		69A72F0F225BB3270033E6AC /* showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showAlert.swift; sourceTree = "<group>"; };
 		69A72F11225BB3EA0033E6AC /* API+AUTH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+AUTH.swift"; sourceTree = "<group>"; };
+		69A7B2C62281962A002F9F1B /* orderCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderCartVC.swift; sourceTree = "<group>"; };
 		69AB3B7F227AFE4F00284141 /* wallat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = wallat.storyboard; sourceTree = "<group>"; };
 		69AB3B83227B06EA00284141 /* waletHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waletHomeVC.swift; sourceTree = "<group>"; };
 		69AB3B85227B0A0600284141 /* API+Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Wallet.swift"; sourceTree = "<group>"; };
 		69AB3B87227B135400284141 /* bakagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bakagesVC.swift; sourceTree = "<group>"; };
+		69AB3B89227B18FB00284141 /* PoakageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoakageCell.swift; sourceTree = "<group>"; };
 		69ADBE362263600E0091A761 /* addToCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addToCartVC.swift; sourceTree = "<group>"; };
 		69ADBE39226389000091A761 /* API+Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Cart.swift"; sourceTree = "<group>"; };
 		69AF4A032259EF1200B88D16 /* RAALEAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAALEAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,8 +183,27 @@
 			isa = PBXGroup;
 			children = (
 				6915C1A52264B3F200B732F1 /* cartVC.swift */,
+				69A7B2C62281962A002F9F1B /* orderCartVC.swift */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		69A280892282EE7A0054FB6B /* Myorders */ = {
+			isa = PBXGroup;
+			children = (
+				69A2808A2282EF050054FB6B /* myOrdersVC.swift */,
+				69A2808F228303620054FB6B /* myorderDetilesVC.swift */,
+			);
+			path = Myorders;
+			sourceTree = "<group>";
+		};
+		69A2808C2282EF810054FB6B /* MyOrders */ = {
+			isa = PBXGroup;
+			children = (
+				69A2808D2282F6190054FB6B /* myordersCell.swift */,
+				69A28091228306EF0054FB6B /* myOrderDetailsCell.swift */,
+			);
+			path = MyOrders;
 			sourceTree = "<group>";
 		};
 		69A72F13225BB8490033E6AC /* Auth */ = {
@@ -199,6 +234,14 @@
 				69AB3B87227B135400284141 /* bakagesVC.swift */,
 			);
 			path = walet;
+			sourceTree = "<group>";
+		};
+		69AB3B8B227B192000284141 /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				69AB3B89227B18FB00284141 /* PoakageCell.swift */,
+			);
+			path = wallet;
 			sourceTree = "<group>";
 		};
 		69AF49FA2259EF1200B88D16 = {
@@ -248,6 +291,7 @@
 				6915C19822648A2700B732F1 /* API+Profile.swift */,
 				69FC94872265F8D100E33609 /* API+Offers.swift */,
 				69AB3B85227B0A0600284141 /* API+Wallet.swift */,
+				699ED6212281CC9000DD872F /* API+Order.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -313,9 +357,11 @@
 		69AF4A1F2259F19B00B88D16 /* cellClass */ = {
 			isa = PBXGroup;
 			children = (
+				69A2808C2282EF810054FB6B /* MyOrders */,
 				69FC948E2265FC1000E33609 /* Offers */,
 				6915C1A12264AFAC00B732F1 /* cart */,
 				69B191E2225F5C760044900D /* home */,
+				69AB3B8B227B192000284141 /* wallet */,
 			);
 			path = cellClass;
 			sourceTree = "<group>";
@@ -329,6 +375,7 @@
 				6915C19F2264A33B00B732F1 /* cart.storyboard */,
 				69FC94892265FA9400E33609 /* offers.storyboard */,
 				69AB3B7F227AFE4F00284141 /* wallat.storyboard */,
+				69A280872282E7E30054FB6B /* myOrders.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -357,6 +404,7 @@
 		69D86925225CF8880085653E /* home */ = {
 			isa = PBXGroup;
 			children = (
+				69A280892282EE7A0054FB6B /* Myorders */,
 				69FC948B2265FBAE00E33609 /* Offers */,
 				6915C1A42264B3D200B732F1 /* Cart */,
 				69B191E5225F814E0044900D /* Search */,
@@ -467,6 +515,7 @@
 				69FC948A2265FA9400E33609 /* offers.storyboard in Resources */,
 				69AF4A2E225A1EFE00B88D16 /* TCMI____.TTF in Resources */,
 				6915C19722647F3700B732F1 /* setting.storyboard in Resources */,
+				69A280882282E7E30054FB6B /* myOrders.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +582,7 @@
 				6915C1A62264B3F200B732F1 /* cartVC.swift in Sources */,
 				69AF4A24225A066C00B88D16 /* roundedView.swift in Sources */,
 				69B191E1225F5C710044900D /* searchCell.swift in Sources */,
+				69A7B2C72281962A002F9F1B /* orderCartVC.swift in Sources */,
 				69AB3B84227B06EA00284141 /* waletHomeVC.swift in Sources */,
 				691F1CE22265DC65000E4C02 /* changePasswordVC.swift in Sources */,
 				69AF4A36225A5A3500B88D16 /* menueVC.swift in Sources */,
@@ -549,10 +599,13 @@
 				69A72F12225BB3EA0033E6AC /* API+AUTH.swift in Sources */,
 				69B191E9225F85450044900D /* maimMnueCell.swift in Sources */,
 				69FC94902265FC3400E33609 /* offerscell.swift in Sources */,
+				69AB3B8A227B18FB00284141 /* PoakageCell.swift in Sources */,
 				69D86929225D08E80085653E /* registerVC.swift in Sources */,
+				69A28092228306EF0054FB6B /* myOrderDetailsCell.swift in Sources */,
 				69FC94942266050900E33609 /* offermenuCell.swift in Sources */,
 				69AB3B88227B135400284141 /* bakagesVC.swift in Sources */,
 				69ADBE3A226389000091A761 /* API+Cart.swift in Sources */,
+				69A2808E2282F6190054FB6B /* myordersCell.swift in Sources */,
 				69B191E7225F816B0044900D /* menuVC.swift in Sources */,
 				69A72F0C225BAF2B0033E6AC /* Cofig.swift in Sources */,
 				69AF4A092259EF1200B88D16 /* loginVC.swift in Sources */,
@@ -564,10 +617,13 @@
 				69B191E4225F5CA10044900D /* searchdetailsVC.swift in Sources */,
 				69ADBE372263600E0091A761 /* addToCartVC.swift in Sources */,
 				69A72F10225BB3270033E6AC /* showAlert.swift in Sources */,
+				699ED6222281CC9000DD872F /* API+Order.swift in Sources */,
+				69A28090228303620054FB6B /* myorderDetilesVC.swift in Sources */,
 				69A72F0E225BB24E0033E6AC /* helper.swift in Sources */,
 				69C19D6B225E5A6500C14259 /* API+Home.swift in Sources */,
 				69B191EB225F9A260044900D /* mellCell.swift in Sources */,
 				69FC949622660D2700E33609 /* offerAddCartVC.swift in Sources */,
+				69A2808B2282EF050054FB6B /* myOrdersVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -103,27 +103,6 @@ share system  </string>
                                                             <segue destination="a6z-eY-tav" kind="show" id="9wZ-g9-QaX"/>
                                                         </connections>
                                                     </button>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9M7-nq-j5e">
-                                                        <rect key="frame" x="10" y="10" width="240" height="128"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZyM-j1-0z1">
-                                                            <size key="itemSize" width="50" height="50"/>
-                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        </collectionViewFlowLayout>
-                                                        <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Teg-gN-8H1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                </view>
-                                                            </collectionViewCell>
-                                                        </cells>
-                                                    </collectionView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -335,10 +314,10 @@ share system  </string>
             </objects>
             <point key="canvasLocation" x="90" y="192.25352112676057"/>
         </scene>
-        <!--View Controller-->
+        <!--BakagesVC-->
         <scene sceneID="ymC-UJ-ZhN">
             <objects>
-                <viewController id="a6z-eY-tav" sceneMemberID="viewController">
+                <viewController id="a6z-eY-tav" customClass="bakagesVC" customModule="RAALEAT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lw1-dM-APz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,7 +332,7 @@ share system  </string>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bY8-59-qiy">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="bY8-59-qiy" customClass="PoakageCell" customModule="RAALEAT" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="121" height="133"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -369,32 +348,87 @@ share system  </string>
                                                     <color key="textColor" red="0.87450980389999999" green="0.54901960780000003" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ7-2g-Jfg" customClass="gredentButon" customModule="RAALEAT" customModuleProvider="target">
+                                                    <rect key="frame" x="32" y="96" width="57" height="31"/>
+                                                    <color key="backgroundColor" red="0.86436456439999998" green="0.56929165120000003" blue="0.24719119070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="TwCenMT-Bold" family="Tw Cen MT" pointSize="17"/>
+                                                    <state key="normal" title="Bay">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" red="0.93725490199999995" green="0.61960784310000006" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" red="0.78823529410000004" green="0.40784313729999999" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOffset">
+                                                            <real key="value" value="0.10000000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buys:" destination="bY8-59-qiy" eventType="touchUpInside" id="gje-aP-eeB"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="QQ7-2g-Jfg" secondAttribute="bottom" constant="6" id="F4t-ho-aJT"/>
                                             <constraint firstAttribute="bottom" secondItem="Kex-sz-7m8" secondAttribute="bottom" id="LUR-dd-C2q"/>
                                             <constraint firstItem="vn4-4U-dsd" firstAttribute="centerY" secondItem="bY8-59-qiy" secondAttribute="centerY" id="O05-ft-UCA"/>
                                             <constraint firstItem="Kex-sz-7m8" firstAttribute="leading" secondItem="bY8-59-qiy" secondAttribute="leading" id="Prw-Mf-yEy"/>
                                             <constraint firstAttribute="trailing" secondItem="Kex-sz-7m8" secondAttribute="trailing" id="aAr-xq-z8T"/>
                                             <constraint firstItem="Kex-sz-7m8" firstAttribute="top" secondItem="bY8-59-qiy" secondAttribute="top" id="b8L-Rn-Tb8"/>
+                                            <constraint firstItem="QQ7-2g-Jfg" firstAttribute="leading" secondItem="bY8-59-qiy" secondAttribute="leading" constant="32" id="fna-15-AUz"/>
                                             <constraint firstItem="vn4-4U-dsd" firstAttribute="centerX" secondItem="bY8-59-qiy" secondAttribute="centerX" id="iL4-4R-xZM"/>
+                                            <constraint firstAttribute="trailing" secondItem="QQ7-2g-Jfg" secondAttribute="trailing" constant="32" id="mVn-Xw-c5M"/>
                                         </constraints>
-                                        <string key="reuseIdentifier" base64-UTF8="YES">
-CQ
-</string>
+                                        <connections>
+                                            <outlet property="waltes" destination="vn4-4U-dsd" id="dfj-gb-qBG"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-rr-2L5">
+                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                                <color key="color" red="0.87450980389999999" green="0.54901960780000003" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="h6h-8h-9bS" firstAttribute="trailing" secondItem="30g-5i-BzD" secondAttribute="trailing" id="CjH-Nz-Dod"/>
                             <constraint firstItem="h6h-8h-9bS" firstAttribute="bottom" secondItem="30g-5i-BzD" secondAttribute="bottom" id="FBy-qK-8z7"/>
                             <constraint firstItem="30g-5i-BzD" firstAttribute="leading" secondItem="h6h-8h-9bS" secondAttribute="leading" id="FrD-jq-YNK"/>
+                            <constraint firstItem="DG4-rr-2L5" firstAttribute="centerX" secondItem="lw1-dM-APz" secondAttribute="centerX" id="KSU-go-FyE"/>
                             <constraint firstItem="30g-5i-BzD" firstAttribute="top" secondItem="lw1-dM-APz" secondAttribute="top" id="Q8w-lf-pnh"/>
+                            <constraint firstItem="DG4-rr-2L5" firstAttribute="centerY" secondItem="lw1-dM-APz" secondAttribute="centerY" id="RvI-x6-smd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h6h-8h-9bS"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="30g-5i-BzD" id="50c-51-4R9"/>
+                        <outlet property="spiner" destination="DG4-rr-2L5" id="K9N-5L-Hxq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOb-UE-qPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
